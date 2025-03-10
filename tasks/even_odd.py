@@ -9,4 +9,15 @@ def even_odd(numbers: list[int]) -> float:
         >> even_odd([1, 2, 3, 4, 5])
         0.6667
     """
-    raise NotImplementedError
+    even_sum = 0
+    odd_sum = 0
+
+    for number in numbers:
+        if number % 2 == 0:
+            even_sum += number
+        else:
+            odd_sum += number
+
+    if odd_sum == 0:
+        return 0
+    return even_sum / odd_sum

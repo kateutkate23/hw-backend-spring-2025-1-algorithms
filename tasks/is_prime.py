@@ -12,4 +12,11 @@ def is_prime(number: int) -> bool:
         >> is_prime(4):
         True
     """
-    raise NotImplementedError
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            return False
+
+    if number < 2:
+        return False
+    else:
+        return True
